@@ -1,0 +1,45 @@
+<!-- main content -->
+<html>
+<header>
+	<script src="TicTacToeA2.js"></script>
+   <link rel="stylesheet" type="text/css" href="TicTacToeA2.css">
+   <h1>Tic Tac Toe!</h1>
+</header>
+    <body>
+<!-- game board -->
+<table>
+  <tr>
+    <td id="c1" onclick="cellClicked(this)" class="cell">0</td>
+    <td id="c11" onclick="cellClicked(this)" class="cell">1</td>
+    <td id="c111" onclick="cellClicked(this)" class="cell">2</td>
+  </tr>
+  <tr>
+    <td id="c2" onclick="cellClicked(this)" class="cell">3</td>
+    <td id="c22" onclick="cellClicked(this)" class="cell">4</td>
+    <td id="c222" onclick="cellClicked(this)" class="cell">5</td>
+  </tr>
+  <tr>
+    <td id="c3" onclick="cellClicked(this)" class="cell">6</td>
+    <td id="c33" onclick="cellClicked(this)" class="cell">7</td>
+    <td id="c333" onclick="cellClicked(this)" class="cell">8</td>
+  </tr>
+</table>
+
+<!-- play information and controls -->
+<p>Player <span id="player">X</span> Go!
+  <button id="reset" onclick="resetGame()">Reset Game1</button>
+</p>
+
+<!-- footer -->
+ <footer>Ansh @ Sheridan SYST10199 Web Programming
+</footer>
+
+<!-- hidden elements used for displaying results -->
+<div id="message">
+  <p>GAME OVER!</p>
+    <h3 id="winner"></h3>
+  <p>&mdash;click anywhere in the box to dismiss this message&mdash;</p>
+</div>
+<div id="overlay"></div>
+    </body>
+</html>
