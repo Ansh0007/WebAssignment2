@@ -53,19 +53,16 @@ function cellClicked(cell) {
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
 	
-
-   
-
-   
-    if(gameOver=== false && cell.innerHTML === ""){
-        
-        // TODO: decrease # of empty cells by 1
-         // TODO: document this code from class
-        empty--;
+	if(gameOver === false && cell.innerHTML===""){
+	console.log("Helo");
+    // TODO: decrease # of empty cells by 1
+	empty--;
+    // TODO: document this code from class
     cell.innerHTML = player;
     checkWin();    
     player = (player === "X") ? "O" : "X";
-    document.getElementById("player").innerHTML = player;}
+    document.getElementById("player").innerHTML = player;
+	}
 }
 
 /* Function checkWin() is called to check all winning combinations and display results
@@ -82,14 +79,11 @@ function checkWin() {
 
             // TODO: replace console.log("We have a winner!") with:
 			//  - set gameOver variable: game is now over 
-                        gameOver=true;
-                        
-				
+				gameOver=true;
             document.getElementById("winner").innerHTML = player + " Wins!";
 			//  - display "X Wins!" or "O Wins!" in the winner H3
             //  - call displayWin(true) function
-            displayWin(gameOver);
-			
+			displayWin(gameOver);
             //  - break out of this loop: no point in continuing
 			break;
         }
