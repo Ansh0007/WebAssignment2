@@ -30,13 +30,13 @@ function resetGame() {
     for ( i = 0; i < board.length; i++) {
         board[i].innerHTML = "";
     }
-    player="X";
+    player="X"; //initialise value of starting player to "X"
 	
     // TODO reset player back to X and update it on the page
     
-	empty=9;
+	empty=9; //set empty cells to 9
     // TODO reset gameOver and # of empty cells
-	gameOver=false;
+	gameOver=false; //gameOver is set to false to run the program
 }
 
 /* Function cellClicked() is called
@@ -54,9 +54,9 @@ function cellClicked(cell) {
     // still in progress!
 	
 	if(gameOver === false && cell.innerHTML===""){
-	console.log("Helo");
+	
     // TODO: decrease # of empty cells by 1
-	empty--;
+	empty--;//decreased number of empty cells by 1
     // TODO: document this code from class
     cell.innerHTML = player;
     checkWin();    
@@ -79,8 +79,8 @@ function checkWin() {
 
             // TODO: replace console.log("We have a winner!") with:
 			//  - set gameOver variable: game is now over 
-				gameOver=true;
-            document.getElementById("winner").innerHTML = player + " Wins!";
+				gameOver=true; //this command ends the game to show the final winner
+            document.getElementById("winner").innerHTML = player + " Wins!";//shows the winner
 			//  - display "X Wins!" or "O Wins!" in the winner H3
             //  - call displayWin(true) function
 			displayWin(gameOver);
